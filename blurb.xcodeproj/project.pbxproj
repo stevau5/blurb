@@ -16,6 +16,7 @@
 		A2E0D7F32B82ABAD00A5AE60 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D7F22B82ABAD00A5AE60 /* RegistrationView.swift */; };
 		A2E0D7F52B83DEB700A5AE60 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D7F42B83DEB700A5AE60 /* ProfileView.swift */; };
 		A2E0D7F72B83E3BC00A5AE60 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D7F62B83E3BC00A5AE60 /* SettingsRowView.swift */; };
+		A2E0D7F92B83E89C00A5AE60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D7F82B83E89C00A5AE60 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		A2E0D7F22B82ABAD00A5AE60 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		A2E0D7F42B83DEB700A5AE60 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A2E0D7F62B83E3BC00A5AE60 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		A2E0D7F82B83E89C00A5AE60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		A2E0D7E62B82A28E00A5AE60 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A2E0D7F82B83E89C00A5AE60 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				A2E0D7F12B82A5FE00A5AE60 /* InputView.swift in Sources */,
 				A2E0D7D82B829CAF00A5AE60 /* ContentView.swift in Sources */,
 				A2E0D7D62B829CAF00A5AE60 /* blurbApp.swift in Sources */,
+				A2E0D7F92B83E89C00A5AE60 /* User.swift in Sources */,
 				A2E0D7F52B83DEB700A5AE60 /* ProfileView.swift in Sources */,
 				A2E0D7F32B82ABAD00A5AE60 /* RegistrationView.swift in Sources */,
 				A2E0D7F72B83E3BC00A5AE60 /* SettingsRowView.swift in Sources */,

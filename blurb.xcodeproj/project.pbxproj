@@ -46,6 +46,7 @@
 		A2E0D8302B83F07800A5AE60 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A2E0D82F2B83F07800A5AE60 /* FirebaseStorage */; };
 		A2E0D8322B83F07800A5AE60 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A2E0D8312B83F07800A5AE60 /* FirebaseStorageCombine-Community */; };
 		A2E0D8362B83F19400A5AE60 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8352B83F19400A5AE60 /* AuthViewModel.swift */; };
+		A2E0D8382B86DDFB00A5AE60 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A2E0D8372B86DDFB00A5AE60 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		A2E0D7F82B83E89C00A5AE60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A2E0D7FA2B83EF7D00A5AE60 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2E0D8352B83F19400A5AE60 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		A2E0D8372B86DDFB00A5AE60 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		A2E0D7D42B829CAF00A5AE60 /* blurb */ = {
 			isa = PBXGroup;
 			children = (
+				A2E0D8372B86DDFB00A5AE60 /* .gitignore */,
 				A2E0D7FA2B83EF7D00A5AE60 /* GoogleService-Info.plist */,
 				A2E0D7E62B82A28E00A5AE60 /* Model */,
 				A2E0D7E52B82A28C00A5AE60 /* Core */,
@@ -307,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E0D8382B86DDFB00A5AE60 /* .gitignore in Resources */,
 				A2E0D7DD2B829CB000A5AE60 /* Preview Assets.xcassets in Resources */,
 				A2E0D7DA2B829CB000A5AE60 /* Assets.xcassets in Resources */,
 				A2E0D7FB2B83EF7D00A5AE60 /* GoogleService-Info.plist in Resources */,

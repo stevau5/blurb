@@ -83,6 +83,8 @@ class AuthViewModel: ObservableObject {
             
             print("Current User is: \(String(describing: self.currentUser))")
         } catch {
+            self.userSession = nil
+            self.currentUser = nil
             print("Failed to fetch user, \(error.localizedDescription)")
         }
     }

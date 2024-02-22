@@ -26,9 +26,9 @@ struct RegistrationView: View {
                 InputView(text: $email, title: "Email Address", placeholder: "Enter your email")
                     .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                 InputView(text: $fullName, title: "Full name", placeholder: "Enter your name")
-                InputView(text: $password, title: "Password", placeholder: "Enter your password", isSecureField: true)
+                InputView(text: $password, title: "Password", placeholder: "Enter your password", isSecureField: true, isNewPassword: true)
                 ZStack(alignment: .trailing) {
-                    InputView(text: $passwordConfirmation, title: "Confirm password", placeholder: "Confirm your password", isSecureField: true)
+                    InputView(text: $passwordConfirmation, title: "Confirm password", placeholder: "Confirm your password", isSecureField: true, isNewPassword: true)
                     
                     if !password.isEmpty && !passwordConfirmation.isEmpty {
                         if(password == passwordConfirmation) {

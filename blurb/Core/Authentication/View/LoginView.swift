@@ -16,15 +16,16 @@ struct LoginView: View {
         NavigationStack {
             VStack {
                 // image
-                Image("logo")
+                Image("logo 1")
                     .resizable()
-                    .scaledToFill()
-                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 120)
-                    .padding(.vertical, 32);
-                // form fields
+                    .scaledToFit()
+                    .frame(width: 120, height: 120)
+                    .padding(.vertical, 32)
+                    .clipShape(Circle())
+
                 VStack(spacing: 24){
                     InputView(text: $email, title: "Email Address", placeholder: "name@example.com")
-                    .autocapitalization(.none)
+                        .autocapitalization(.none)
                     
                     InputView(text: $password, title: "Password", placeholder: "Enter your password", isSecureField: true)
                 }
@@ -33,7 +34,6 @@ struct LoginView: View {
                 
                 
                 // sign in button
-            
                 Button {
                     Task {
                         try await viewModel.signIn(withEmail: email, password: password)
@@ -63,7 +63,7 @@ struct LoginView: View {
                     HStack {
                         Text("Dont have an account?")
                         Text("Sign up")
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .fontWeight(.bold)
                     }
                     .font(.system(size: 14))
                 }

@@ -13,13 +13,11 @@ struct InputView: View {
     let placeholder: String
     var isSecureField = false
     var isNewPassword: Bool = false
-
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(title)
                 .foregroundColor(Color(.darkGray))
-                .frame(minWidth: 44, minHeight: 44)
                 .fontWeight(.semibold)
                 .font(.footnote)
             

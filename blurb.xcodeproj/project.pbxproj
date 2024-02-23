@@ -47,6 +47,9 @@
 		A2E0D8362B83F19400A5AE60 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8352B83F19400A5AE60 /* AuthViewModel.swift */; };
 		A2E0D83A2B86E08200A5AE60 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A2E0D8392B86E08200A5AE60 /* .gitignore */; };
 		A2E0D83C2B86E3B900A5AE60 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2E0D83B2B86E3B900A5AE60 /* GoogleService-Info.plist */; };
+		A2E0D83E2B88413200A5AE60 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D83D2B88413200A5AE60 /* Home.swift */; };
+		A2E0D8402B88523800A5AE60 /* AddLanguageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D83F2B88523800A5AE60 /* AddLanguageCard.swift */; };
+		A2E0D8422B88578300A5AE60 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8412B88578300A5AE60 /* Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		A2E0D8352B83F19400A5AE60 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		A2E0D8392B86E08200A5AE60 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A2E0D83B2B86E3B900A5AE60 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A2E0D83D2B88413200A5AE60 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		A2E0D83F2B88523800A5AE60 /* AddLanguageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLanguageCard.swift; sourceTree = "<group>"; };
+		A2E0D8412B88578300A5AE60 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,7 @@
 			children = (
 				A2E0D7F02B82A5FE00A5AE60 /* InputView.swift */,
 				A2E0D7F62B83E3BC00A5AE60 /* SettingsRowView.swift */,
+				A2E0D83F2B88523800A5AE60 /* AddLanguageCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				A2E0D7F82B83E89C00A5AE60 /* User.swift */,
+				A2E0D8412B88578300A5AE60 /* Language.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +216,7 @@
 			children = (
 				A2E0D7EE2B82A43200A5AE60 /* LoginView.swift */,
 				A2E0D7F22B82ABAD00A5AE60 /* RegistrationView.swift */,
+				A2E0D83D2B88413200A5AE60 /* Home.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,12 +335,15 @@
 			files = (
 				A2E0D7EF2B82A43200A5AE60 /* LoginView.swift in Sources */,
 				A2E0D7F12B82A5FE00A5AE60 /* InputView.swift in Sources */,
+				A2E0D83E2B88413200A5AE60 /* Home.swift in Sources */,
 				A2E0D7D82B829CAF00A5AE60 /* ContentView.swift in Sources */,
 				A2E0D7D62B829CAF00A5AE60 /* blurbApp.swift in Sources */,
 				A2E0D7F92B83E89C00A5AE60 /* User.swift in Sources */,
 				A2E0D7F52B83DEB700A5AE60 /* ProfileView.swift in Sources */,
 				A2E0D7F32B82ABAD00A5AE60 /* RegistrationView.swift in Sources */,
 				A2E0D7F72B83E3BC00A5AE60 /* SettingsRowView.swift in Sources */,
+				A2E0D8422B88578300A5AE60 /* Language.swift in Sources */,
+				A2E0D8402B88523800A5AE60 /* AddLanguageCard.swift in Sources */,
 				A2E0D8362B83F19400A5AE60 /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

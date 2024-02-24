@@ -14,6 +14,7 @@ struct IndividualLanguage: View {
     let id: String
     let name: String
     let hello: String
+    let isAppendable: Bool
     var body: some View {
         VStack {
             HStack {
@@ -35,12 +36,14 @@ struct IndividualLanguage: View {
         .padding()
         .contentShape(Rectangle())
         .onTapGesture {
-            languageViewModel.wasLanguageSelected = true
-            languageViewModel.addSelectedLanguagetoSelectedLanguages(selectedLanguage: Language(id: self.id, name: self.name, hello: self.hello))
+            if(isAppendable) {
+                languageViewModel.wasLanguageSelected = true
+                languageViewModel.addSelectedLanguagetoSelectedLanguages(selectedLanguage: Language(id: self.id, name: self.name, hello: self.hello))
+            }
         }
     }
 }
 
 #Preview {
-    IndividualLanguage(id: NSUUID().uuidString ,name: "Japanese", hello: "こんにちは")
+    IndividualLanguage(id: NSUUID().uuidString ,name: "Japanese", hello: "こんにちは", isAppendable: true)
 }

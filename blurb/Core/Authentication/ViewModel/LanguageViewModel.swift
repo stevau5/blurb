@@ -6,26 +6,41 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseFirestoreSwift
 
 class LanguageViewModel: ObservableObject {
-    @Published var Languages: [Language]
+    @Published var languages: [Language]
     @Published var selectedLanguages: [Language]
     @Published var wasLanguageSelected: Bool = false
     
     init() {
-        // replace with a fetch Languages endpoint...
-        self.Languages = [
-            Language(id: NSUUID().uuidString, name: "Japanese", hello: "こんにちは"),
-            Language(id: NSUUID().uuidString, name: "French", hello: "Bonjour"),
-            Language(id: NSUUID().uuidString, name: "Italian", hello: "Ciao"),
-        ]
-        
-        // replace with fetch user languages endpoint ...
+        self.languages = []
         self.selectedLanguages = []
+        
+        Task {
+            await fetchLanguages()
+            // add a fetch user languages endpoint ...
+
+        }
     }
     
-    func fetchLanguages() {
-        
+    func fetchLanguages() async {
+        do {
+            let snapshot = try await Firestore.firestore().collection("languages").getDocuments()
+            DispatchQueue.main.async {
+                for document in snapshot.documents {
+                    do {
+                        var language = try document.data(as: Language.self)
+                        self.languages.append(language)
+                    } catch {
+                        print("Failed to fetch languages, \(error.localizedDescription)")
+                    }
+                }
+            }
+        } catch {
+            print("Failed to fetch languages, \(error.localizedDescription)")
+        }
     }
     
     func fetchUserSelectedLanguages() {
@@ -35,5 +50,4 @@ class LanguageViewModel: ObservableObject {
     func addSelectedLanguagetoSelectedLanguages(selectedLanguage: Language) {
         self.selectedLanguages.append(selectedLanguage)
     }
-    
 }

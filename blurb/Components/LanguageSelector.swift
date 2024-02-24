@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct LanguageSelector: View {
+    @EnvironmentObject var languageViewModel: LanguageViewModel
+    
     var body: some View {
-        IndividualLanguage(id: NSUUID().uuidString ,name: "Japanese", hello: "こんにちは")
-        IndividualLanguage(id: NSUUID().uuidString ,name: "French", hello: "Bonjour")
-        IndividualLanguage(id: NSUUID().uuidString ,name: "Italian", hello: "Ciao")
+        ForEach(languageViewModel.languages, id: \.self) { language in
+            if !languageViewModel.selectedLanguages.contains(where: { $0.id == language.id }) {
+                IndividualLanguage(id: language.id, name: language.name, hello: language.hello, isAppendable: true)
+            }
+        }
     }
 }
 

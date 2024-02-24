@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     @EnvironmentObject var viewModel: AuthViewModel;
+    @EnvironmentObject var languageViewModel: LanguageViewModel;
     
     var body: some View {
         NavigationStack {
@@ -24,9 +25,15 @@ struct Home: View {
                 }
             }
             Spacer()
-            Text("You don't have any Language cards")
-                .padding(.vertical, 10)
-            Text("Click the + button below to add one!")
+            if(languageViewModel.selectedLanguages != []) {
+                ForEach(languageViewModel.selectedLanguages, id: \.self) { language in
+                    IndividualLanguage(id: language.id, name: language.name, hello: language.hello, isAppendable: false)
+                }
+            } else {
+                Text("You don't have any Language cards")
+                    .padding(.vertical, 10)
+                Text("Click the + button below to add one!")
+            }
             Spacer()
             AddLanguageCard()
         }

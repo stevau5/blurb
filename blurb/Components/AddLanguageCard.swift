@@ -11,12 +11,15 @@ import UIKit
 struct AddLanguageCard: View {
     @State private var isPressed = false
     @State private var isShowingSheet = false
+    @EnvironmentObject var languageViewModel: LanguageViewModel
     
     var body: some View {
         Button(action: {
             self.isPressed.toggle()
             self.triggerHapticFeedback()
             self.isShowingSheet = true
+            languageViewModel.wasLanguageSelected = false
+            self.isPressed.toggle()
         }, label: {
             // The "+" symbol, styled to look like a button
            Image(systemName: "plus")
@@ -33,17 +36,30 @@ struct AddLanguageCard: View {
         })
             .scaleEffect(isPressed ? 1.2 : 1) // Enlarge the button itself on press
             .animation(.easeInOut(duration: 0.2), value: isPressed) // Animate the scaling effect
-            .sheet(isPresented: $isShowingSheet) { // Attach the sheet here
-                        // Content of the sheet
-                        Text("Hello World")
-                    }
+            .sheet(isPresented: isSheetPresentable) {
+                LanguageSelector()
+            }
     }
     
-    func triggerHapticFeedback() {
-            let generator = UIImpactFeedbackGenerator(style: .medium)
-            generator.prepare() // Prepare the generator to reduce latency
-            generator.impactOccurred() // Trigger the haptic feedback
-        }
+    var isSheetPresentable: Binding<Bool> {
+        Binding(
+            get: {
+                self.isShowingSheet && !languageViewModel.wasLanguageSelected
+            },
+            set: {
+                self.isShowingSheet = $0
+            }
+        )
+    }
+    
+    func triggerHapticFeedback () {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.prepare() // Prepare the generator to reduce latency
+        generator.impactOccurred() // Trigger the haptic feedback
+    }
+    func languageWasSelected () {
+        print("something happened")
+    }
 }
 
 #Preview {

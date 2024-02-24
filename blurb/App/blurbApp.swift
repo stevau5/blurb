@@ -11,6 +11,7 @@ import Firebase
 @main
 struct blurbApp: App {
     @StateObject var viewModel = AuthViewModel()
+    @StateObject var languageViewModel = LanguageViewModel()
     
     init() {
         FirebaseApp.configure()
@@ -19,6 +20,7 @@ struct blurbApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(viewModel)
+                .environmentObject(languageViewModel)
         }
     }
 }

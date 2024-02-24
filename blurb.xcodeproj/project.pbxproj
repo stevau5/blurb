@@ -50,6 +50,9 @@
 		A2E0D83E2B88413200A5AE60 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D83D2B88413200A5AE60 /* Home.swift */; };
 		A2E0D8402B88523800A5AE60 /* AddLanguageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D83F2B88523800A5AE60 /* AddLanguageCard.swift */; };
 		A2E0D8422B88578300A5AE60 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8412B88578300A5AE60 /* Language.swift */; };
+		A2E0D8442B8944C600A5AE60 /* LanguageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8432B8944C600A5AE60 /* LanguageSelector.swift */; };
+		A2E0D8462B89495D00A5AE60 /* IndividualLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8452B89495D00A5AE60 /* IndividualLanguage.swift */; };
+		A2E0D8482B89681200A5AE60 /* LanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8472B89681200A5AE60 /* LanguageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		A2E0D83D2B88413200A5AE60 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		A2E0D83F2B88523800A5AE60 /* AddLanguageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLanguageCard.swift; sourceTree = "<group>"; };
 		A2E0D8412B88578300A5AE60 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		A2E0D8432B8944C600A5AE60 /* LanguageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelector.swift; sourceTree = "<group>"; };
+		A2E0D8452B89495D00A5AE60 /* IndividualLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualLanguage.swift; sourceTree = "<group>"; };
+		A2E0D8472B89681200A5AE60 /* LanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,8 @@
 				A2E0D7F02B82A5FE00A5AE60 /* InputView.swift */,
 				A2E0D7F62B83E3BC00A5AE60 /* SettingsRowView.swift */,
 				A2E0D83F2B88523800A5AE60 /* AddLanguageCard.swift */,
+				A2E0D8432B8944C600A5AE60 /* LanguageSelector.swift */,
+				A2E0D8452B89495D00A5AE60 /* IndividualLanguage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -225,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				A2E0D8352B83F19400A5AE60 /* AuthViewModel.swift */,
+				A2E0D8472B89681200A5AE60 /* LanguageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -336,12 +345,15 @@
 				A2E0D7EF2B82A43200A5AE60 /* LoginView.swift in Sources */,
 				A2E0D7F12B82A5FE00A5AE60 /* InputView.swift in Sources */,
 				A2E0D83E2B88413200A5AE60 /* Home.swift in Sources */,
+				A2E0D8462B89495D00A5AE60 /* IndividualLanguage.swift in Sources */,
+				A2E0D8482B89681200A5AE60 /* LanguageViewModel.swift in Sources */,
 				A2E0D7D82B829CAF00A5AE60 /* ContentView.swift in Sources */,
 				A2E0D7D62B829CAF00A5AE60 /* blurbApp.swift in Sources */,
 				A2E0D7F92B83E89C00A5AE60 /* User.swift in Sources */,
 				A2E0D7F52B83DEB700A5AE60 /* ProfileView.swift in Sources */,
 				A2E0D7F32B82ABAD00A5AE60 /* RegistrationView.swift in Sources */,
 				A2E0D7F72B83E3BC00A5AE60 /* SettingsRowView.swift in Sources */,
+				A2E0D8442B8944C600A5AE60 /* LanguageSelector.swift in Sources */,
 				A2E0D8422B88578300A5AE60 /* Language.swift in Sources */,
 				A2E0D8402B88523800A5AE60 /* AddLanguageCard.swift in Sources */,
 				A2E0D8362B83F19400A5AE60 /* AuthViewModel.swift in Sources */,

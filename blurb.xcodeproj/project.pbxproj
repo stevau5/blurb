@@ -53,6 +53,7 @@
 		A2E0D8442B8944C600A5AE60 /* LanguageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8432B8944C600A5AE60 /* LanguageSelector.swift */; };
 		A2E0D8462B89495D00A5AE60 /* IndividualLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8452B89495D00A5AE60 /* IndividualLanguage.swift */; };
 		A2E0D8482B89681200A5AE60 /* LanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8472B89681200A5AE60 /* LanguageViewModel.swift */; };
+		A2E0D84A2B8BA68B00A5AE60 /* UserLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8492B8BA68B00A5AE60 /* UserLanguage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		A2E0D8432B8944C600A5AE60 /* LanguageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelector.swift; sourceTree = "<group>"; };
 		A2E0D8452B89495D00A5AE60 /* IndividualLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualLanguage.swift; sourceTree = "<group>"; };
 		A2E0D8472B89681200A5AE60 /* LanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewModel.swift; sourceTree = "<group>"; };
+		A2E0D8492B8BA68B00A5AE60 /* UserLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLanguage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			children = (
 				A2E0D7F82B83E89C00A5AE60 /* User.swift */,
 				A2E0D8412B88578300A5AE60 /* Language.swift */,
+				A2E0D8492B8BA68B00A5AE60 /* UserLanguage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E0D84A2B8BA68B00A5AE60 /* UserLanguage.swift in Sources */,
 				A2E0D7EF2B82A43200A5AE60 /* LoginView.swift in Sources */,
 				A2E0D7F12B82A5FE00A5AE60 /* InputView.swift in Sources */,
 				A2E0D83E2B88413200A5AE60 /* Home.swift in Sources */,

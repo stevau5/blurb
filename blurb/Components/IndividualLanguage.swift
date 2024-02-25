@@ -10,6 +10,7 @@ import SwiftUI
 struct IndividualLanguage: View {
     @State private var isPressed = false
     @EnvironmentObject var languageViewModel: LanguageViewModel
+    @EnvironmentObject var viewModel: AuthViewModel
     
     let id: String
     let name: String
@@ -38,7 +39,9 @@ struct IndividualLanguage: View {
         .onTapGesture {
             if(isAppendable) {
                 languageViewModel.wasLanguageSelected = true
-                languageViewModel.addSelectedLanguagetoSelectedLanguages(selectedLanguage: Language(id: self.id, name: self.name, hello: self.hello))
+                Task {
+                    await languageViewModel.addSelectedLanguagetoSelectedLanguages(selectedLanguage: Language(id: self.id, name: self.name, hello: self.hello), user: viewModel.currentUser!)
+                }
             }
         }
     }

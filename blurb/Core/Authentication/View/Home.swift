@@ -37,6 +37,13 @@ struct Home: View {
             Spacer()
             AddLanguageCard()
         }
+        .onReceive(viewModel.$currentUser) { currentUser in
+            if let user = currentUser {
+                Task {
+                    await languageViewModel.fetchUserSelectedLanguages(user: user)
+                }
+            }
+        }
         
         
     }

@@ -80,7 +80,6 @@ class AuthViewModel: ObservableObject {
             guard let uid = Auth.auth().currentUser?.uid else { return }
             let snapshot = try await Firestore.firestore().collection("users").document(uid).getDocument()
             self.currentUser = try snapshot.data(as: User.self)
-            
             print("Current User is: \(String(describing: self.currentUser))")
         } catch {
             self.userSession = nil

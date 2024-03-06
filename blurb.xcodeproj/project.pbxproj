@@ -54,6 +54,7 @@
 		A2E0D8462B89495D00A5AE60 /* IndividualLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8452B89495D00A5AE60 /* IndividualLanguage.swift */; };
 		A2E0D8482B89681200A5AE60 /* LanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8472B89681200A5AE60 /* LanguageViewModel.swift */; };
 		A2E0D84A2B8BA68B00A5AE60 /* UserLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8492B8BA68B00A5AE60 /* UserLanguage.swift */; };
+		A2E0D84D2B97DEA600A5AE60 /* Learn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D84C2B97DEA600A5AE60 /* Learn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		A2E0D8452B89495D00A5AE60 /* IndividualLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualLanguage.swift; sourceTree = "<group>"; };
 		A2E0D8472B89681200A5AE60 /* LanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewModel.swift; sourceTree = "<group>"; };
 		A2E0D8492B8BA68B00A5AE60 /* UserLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLanguage.swift; sourceTree = "<group>"; };
+		A2E0D84C2B97DEA600A5AE60 /* Learn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 		A2E0D7E52B82A28C00A5AE60 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A2E0D84B2B97DE9100A5AE60 /* Learn */,
 				A2E0D7E92B82A2E200A5AE60 /* Authentication */,
 				A2E0D7EA2B82A2E800A5AE60 /* Profile */,
 				A2E0D7E82B82A2D000A5AE60 /* Root */,
@@ -239,6 +242,14 @@
 				A2E0D8472B89681200A5AE60 /* LanguageViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A2E0D84B2B97DE9100A5AE60 /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				A2E0D84C2B97DEA600A5AE60 /* Learn.swift */,
+			);
+			path = Learn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +369,7 @@
 				A2E0D7F32B82ABAD00A5AE60 /* RegistrationView.swift in Sources */,
 				A2E0D7F72B83E3BC00A5AE60 /* SettingsRowView.swift in Sources */,
 				A2E0D8442B8944C600A5AE60 /* LanguageSelector.swift in Sources */,
+				A2E0D84D2B97DEA600A5AE60 /* Learn.swift in Sources */,
 				A2E0D8422B88578300A5AE60 /* Language.swift in Sources */,
 				A2E0D8402B88523800A5AE60 /* AddLanguageCard.swift in Sources */,
 				A2E0D8362B83F19400A5AE60 /* AuthViewModel.swift in Sources */,

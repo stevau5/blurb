@@ -99,4 +99,14 @@ class LanguageViewModel: ObservableObject {
             print("Failed to add language to selected languages, \(error.localizedDescription)")
         }
     }
+    
+//    func deleteLanguage(selectedLanguage: Language, user: User) async {
+//        do {
+//            let userLanguageToDelete = UserLanguage(id: "something", userId: user.id, languageId: selectedLanguage.id)
+//            let encodedUserLanguageToDelete = try Firestore.Encoder().encode(userLanguageToDelete)
+//            try await Firestore.firestore().collection("userLanguages")
+//        } catch {
+//            
+//        }
+//    }
 }

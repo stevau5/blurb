@@ -172,8 +172,6 @@
 			children = (
 				A2E0D7F02B82A5FE00A5AE60 /* InputView.swift */,
 				A2E0D7F62B83E3BC00A5AE60 /* SettingsRowView.swift */,
-				A2E0D83F2B88523800A5AE60 /* AddLanguageCard.swift */,
-				A2E0D8432B8944C600A5AE60 /* LanguageSelector.swift */,
 				A2E0D8452B89495D00A5AE60 /* IndividualLanguage.swift */,
 			);
 			path = Components;
@@ -182,6 +180,7 @@
 		A2E0D7E52B82A28C00A5AE60 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A2E0D84E2B99672B00A5AE60 /* Home */,
 				A2E0D84B2B97DE9100A5AE60 /* Learn */,
 				A2E0D7E92B82A2E200A5AE60 /* Authentication */,
 				A2E0D7EA2B82A2E800A5AE60 /* Profile */,
@@ -230,7 +229,6 @@
 			children = (
 				A2E0D7EE2B82A43200A5AE60 /* LoginView.swift */,
 				A2E0D7F22B82ABAD00A5AE60 /* RegistrationView.swift */,
-				A2E0D83D2B88413200A5AE60 /* Home.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +248,16 @@
 				A2E0D84C2B97DEA600A5AE60 /* Learn.swift */,
 			);
 			path = Learn;
+			sourceTree = "<group>";
+		};
+		A2E0D84E2B99672B00A5AE60 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A2E0D83D2B88413200A5AE60 /* Home.swift */,
+				A2E0D83F2B88523800A5AE60 /* AddLanguageCard.swift */,
+				A2E0D8432B8944C600A5AE60 /* LanguageSelector.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -34,9 +34,10 @@ struct IndividualLanguage: View {
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: 100)
-            .background(color)
+            .background(colorMap())
             .cornerRadius(10)
-            .padding()
+            .padding(.horizontal)
+            .padding(.vertical, 5)
             .contentShape(Rectangle())
             .onTapGesture {
                 if(isAppendable) {
@@ -54,12 +55,17 @@ struct IndividualLanguage: View {
         }
     }
     
-    let color: Color = {
-        let red = Double.random(in: 0...1)
-        let green = Double.random(in: 0...1)
-        let blue = Double.random(in: 0...1)
-        return Color(red: red, green: green, blue: blue)
-    }()
+    func colorMap() -> Color {
+        if self.name == "Japanese" {
+            return Color(red: 95.0 / 255.0, green: 93.0 / 255.0, blue: 156.0 / 255.0)
+        } else if self.name == "French" {
+            return Color(red: 97.0 / 255.0, green: 150.0 / 255.0, blue: 166.0 / 255.0)
+        } else if self.name == "Italian" {
+            return Color(red: 164.0 / 255.0, green: 206.0 / 255.0, blue: 149.0 / 255.0)
+        } else {
+            return Color(hue: 244.0 / 255.0, saturation: 237.0 / 255.0, brightness: 204.0 / 255.0)
+        }
+    }
 }
 
 #Preview {

@@ -24,7 +24,16 @@ struct Home: View {
                     }
                 }
             }
-            Spacer()
+            Text("Hello \(viewModel.currentUser?.first_name ?? "")!")
+                .font(.largeTitle)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal)
+            Text("Click on a blurb below to get started")
+                .font(.headline)
+                .fontWeight(.light)
+                .padding(.horizontal)
+                .padding([.bottom], 20)
+                .frame(maxWidth: .infinity, alignment: .leading)
             if(languageViewModel.selectedLanguages != []) {
                 ForEach(languageViewModel.selectedLanguages, id: \.self) { language in
                     IndividualLanguage(id: language.id, name: language.name, hello: language.hello, isAppendable: false)
@@ -35,7 +44,9 @@ struct Home: View {
                 Text("Click the + button below to add one!")
             }
             Spacer()
-            AddLanguageCard()
+            if languageViewModel.selectedLanguages.count != languageViewModel.languages.count {
+                AddLanguageCard()
+            }
         }
         .onReceive(viewModel.$currentUser) { currentUser in
             if let user = currentUser {

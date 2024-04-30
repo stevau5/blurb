@@ -28,13 +28,13 @@ struct Home: View {
                 .font(.largeTitle)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
-            Text("Click on a blurb below to get started")
-                .font(.headline)
-                .fontWeight(.light)
-                .padding(.horizontal)
-                .padding([.bottom], 20)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            if(languageViewModel.selectedLanguages != []) {
+            if(!languageViewModel.selectedLanguages.isEmpty) {
+                Text("Click on a blurb below to get started")
+                    .font(.headline)
+                    .fontWeight(.light)
+                    .padding(.horizontal)
+                    .padding([.bottom], 20)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 ForEach(languageViewModel.selectedLanguages, id: \.self) { language in
                     IndividualLanguage(id: language.id, name: language.name, hello: language.hello, isAppendable: false)
                 }

@@ -49,36 +49,34 @@ class LanguageViewModel: ObservableObject {
     func fetchUserSelectedLanguages(user: User) async {
         do {
             self.selectedLanguages = []
+            self.languageIds = []
             let snapshot = try await Firestore.firestore().collection("userLanguages")
                 .whereField("userId", isEqualTo: user.id)
                 .getDocuments()
-            print(snapshot)
             DispatchQueue.main.async {
                 Task {
                     // GET THE LANGUAGE IDS FROM THE USERS SELECTED LANGUAGES
-                    
-                    for document in snapshot.documents {
-                        do {
-                            let userLanguage = try document.data(as: UserLanguage.self)
-                            self.languageIds.append(userLanguage.languageId)
-                            print("CONSOLE LOG: LANGUAGEIDS:::, \(self.languageIds)")
-                        } catch {
-                            print("Failed to fetch selected language \(error.localizedDescription)")
+                    if(snapshot.documents.count != 0) {
+                        for document in snapshot.documents {
+                            do {
+                                let userLanguage = try document.data(as: UserLanguage.self)
+                                self.languageIds.append(userLanguage.languageId)
+                            } catch {
+                                print("Failed to fetch selected language \(error.localizedDescription)")
+                            }
                         }
-                    }
-                    
-                    // GET THE LANGUAGE FROM THE LANGUAGE IDS
-                
-                    let languagesSnapshot = try await Firestore.firestore().collection("languages")
-                        .whereField("id", in: self.languageIds)
-                        .getDocuments()
-                    for document in languagesSnapshot.documents {
-                        do {
-                            let selectedLanguage = try document.data(as: Language.self)
-                            self.selectedLanguages.append(selectedLanguage)
-                            print("selectedLanguages, \(self.selectedLanguages)")
-                        } catch {
-                            print("Failed to fetch selected language \(error.localizedDescription)")
+                        // GET THE LANGUAGE FROM THE LANGUAGE IDS
+                        let languagesSnapshot = try await Firestore.firestore().collection("languages")
+                            .whereField("id", in: self.languageIds)
+                            .getDocuments()
+                        for document in languagesSnapshot.documents {
+                            do {
+                                let selectedLanguage = try document.data(as: Language.self)
+                                self.selectedLanguages.append(selectedLanguage)
+                                print("selectedLanguages are the following:, \(self.selectedLanguages)")
+                            } catch {
+                                print("Failed to fetch selected language \(error.localizedDescription)")
+                            }
                         }
                     }
                 }
@@ -93,20 +91,33 @@ class LanguageViewModel: ObservableObject {
             let userLanguage = UserLanguage(id: NSUUID().uuidString, userId: user.id, languageId: selectedLanguage.id);
             let encodedUserLanguage = try Firestore.Encoder().encode(userLanguage)
             try await Firestore.firestore().collection("userLanguages").addDocument(data: encodedUserLanguage)
-            print("here")
             await fetchUserSelectedLanguages(user: user)
         } catch {
             print("Failed to add language to selected languages, \(error.localizedDescription)")
         }
     }
     
-//    func deleteLanguage(selectedLanguage: Language, user: User) async {
-//        do {
-//            let userLanguageToDelete = UserLanguage(id: "something", userId: user.id, languageId: selectedLanguage.id)
-//            let encodedUserLanguageToDelete = try Firestore.Encoder().encode(userLanguageToDelete)
-//            try await Firestore.firestore().collection("userLanguages")
-//        } catch {
-//            
-//        }
-//    }
+    func deleteLanguage(selectedLanguage: Language, user: User) async {
+        do {
+            let query = Firestore.firestore().collection("userLanguages")
+                .whereField("userId", isEqualTo: user.id)
+                .whereField("languageId", isEqualTo: selectedLanguage.id)
+            
+            
+            let querySnapshot = try await query.getDocuments()
+            // Check for documents and delete each one
+            for document in querySnapshot.documents {
+                do {
+                    try await document.reference.delete()
+                    return;
+                } catch {
+                    // Handle potential errors in deleting the document
+                    print("Error removing document: \(error.localizedDescription)")
+                }
+            }
+            }
+         catch {
+            print("Failed to delete selectedLanguage, \(error.localizedDescription)")
+        }
+    }
 }

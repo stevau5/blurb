@@ -39,7 +39,7 @@ struct Home: View {
                     IndividualLanguage(id: language.id, name: language.name, hello: language.hello, isAppendable: false)
                 }
             } else {
-                Text("You don't have any Language cards")
+                Text("You don't have any blurbs")
                     .padding(.vertical, 10)
                 Text("Click the + button below to add one!")
             }

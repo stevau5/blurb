@@ -15,15 +15,23 @@ struct Learn: View {
     
     var language: Language
     var body: some View {
-        Text("\(self.language.hello)")
-            .onTapGesture {
-                Task {
-                    print("hello 1:, \(languageViewModel.selectedLanguages)")
-                    await languageViewModel.deleteLanguage(selectedLanguage: language, user: viewModel.currentUser!)
-                    presentationMode.wrappedValue.dismiss()
-                    await languageViewModel.fetchUserSelectedLanguages(user: viewModel.currentUser!)
-                    print("hello 2:, \(languageViewModel.selectedLanguages)")
+        VStack(spacing: 20) {
+            Text("\(self.language.hello)")
+                .padding(.vertical)
+                .font(.system(size: 20, weight: .bold))
+                .padding(.top, 10)
+            ScrollView {
+                ForEach(language.translations) { translation in
+                    Word(word: translation.word, translation: translation.translation, index: translation.id)
                 }
             }
+            Spacer()
+        }
+        .padding(.horizontal)
     }
+    
+}
+
+#Preview {
+    Learn(language: Language(id: "some", name: "French", hello: "Bonjour", translations: [Translation(id: "0", word: "Hello", translation: "Bonjour")]))
 }

@@ -16,6 +16,7 @@ struct IndividualLanguage: View {
     let id: String
     let name: String
     let hello: String
+    var translations: [Translation] = []
     let isAppendable: Bool
     var body: some View {
         NavigationStack {
@@ -50,7 +51,7 @@ struct IndividualLanguage: View {
                 }
             }
             .navigationDestination(isPresented: $isNavigatingToLearn) {
-                Learn(language: Language(id: self.id, name: self.name, hello: self.hello))
+                Learn(language: Language(id: self.id, name: self.name, hello: self.hello, translations: self.translations))
             }
         }
     }

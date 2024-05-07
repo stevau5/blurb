@@ -12,12 +12,13 @@ struct Language: Identifiable, Codable, Hashable {
     let id: String
     let name: String
     let hello: String
+    var translations: [Translation] = []
+    
+    func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
 }
 
 func == (lhs: Language, rhs: Language) -> Bool {
     return lhs.id == rhs.id
-}
-
-extension Language {
-    static var MOCK_LANGUAGE = Language(id: NSUUID().uuidString, name: "Japanese", hello: "こんにちは");
 }

@@ -31,8 +31,14 @@ class LanguageViewModel: ObservableObject {
                 Task {
                     for document in snapshot.documents {
                         do {
-                            let language = try document.data(as: Language.self)
+                            var language = try document.data(as: Language.self)
                             Task {
+                                var translations: [Translation] = []
+                                for translation in language.translations {
+                                    var tempTran = Translation(id: translation.id, word: translation.word, translation: translation.translation)
+                                    translations.append(tempTran)
+                                }
+                                language.translations = translations
                                 self.languages.append(language)
                             }
                         } catch {

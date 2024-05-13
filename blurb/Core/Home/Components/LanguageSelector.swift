@@ -20,7 +20,7 @@ struct LanguageSelector: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         ForEach(languageViewModel.languages, id: \.self) { language in
             if !languageViewModel.selectedLanguages.contains(where: { $0.id == language.id }) {
-                IndividualLanguage(id: language.id, name: language.name, hello: language.hello, isAppendable: true)
+                IndividualLanguage(id: language.id, name: language.name, hello: language.hello, code: language.code, isAppendable: true)
                     .frame(height: 100)
             }
         }

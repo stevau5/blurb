@@ -8,10 +8,9 @@
 import Foundation
 import SwiftUI
 
-struct Phrase: Codable {
+struct Phrase: Codable, Identifiable {
     let id: String
     let categoryId: String
     let defaultPhrase: String
     let translations: [String: String]
-    var category: Category?
 }

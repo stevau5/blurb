@@ -12,6 +12,8 @@ import Firebase
 struct blurbApp: App {
     @StateObject var viewModel = AuthViewModel()
     @StateObject var languageViewModel = LanguageViewModel()
+    @StateObject var phraseViewModel = PhraseViewModel()
+    @StateObject var categoryViewModel = CategoryViewModel()
     
     init() {
         FirebaseApp.configure()
@@ -21,6 +23,8 @@ struct blurbApp: App {
             ContentView()
                 .environmentObject(viewModel)
                 .environmentObject(languageViewModel)
+                .environmentObject(categoryViewModel)
+                .environmentObject(phraseViewModel)
         }
     }
 }

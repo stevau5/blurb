@@ -14,8 +14,7 @@ class PhraseViewModel: ObservableObject {
     
     init() {
         self.phrases = []
-        
-        
+
         Task {
             await fetchPhrases()
         }
@@ -27,8 +26,11 @@ class PhraseViewModel: ObservableObject {
             DispatchQueue.main.async {
                 Task {
                     for document in snapshot.documents {
-                        var phrase = try document.data(as: Phrase.self)
+                        print("4 Steven \(document.data())")
+
+                        let phrase = try document.data(as: Phrase.self)
                         self.phrases.append(phrase)
+                        
                     }
                 }
             }

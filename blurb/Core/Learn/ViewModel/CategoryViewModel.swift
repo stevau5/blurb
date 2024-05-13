@@ -29,6 +29,7 @@ class CategoryViewModel: ObservableObject {
                         var category = try document.data(as: Category.self)
                         self.categories.append(category)
                     }
+                    print(self.categories)
                 }
             }
         } catch {

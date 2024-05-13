@@ -12,7 +12,6 @@ var counter = 0;
 struct Word: View {
     let word: String;
     let translation: String;
-    let index: String;
     
     var body: some View {
         HStack {
@@ -27,7 +26,6 @@ struct Word: View {
                     .font(.system(size: 20, weight: .bold))
                     .padding(.horizontal)
             }
-            .padding(.vertical)
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: 100)
@@ -56,5 +54,5 @@ struct Word: View {
 }
 
 #Preview {
-    Word(word: "Where is the washroom?", translation: "Ou sont les toilettes?", index: "2")
+    Word(word: "Where is the washroom?", translation: "Ou sont les toilettes?")
 }

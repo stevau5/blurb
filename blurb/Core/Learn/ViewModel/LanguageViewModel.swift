@@ -30,7 +30,7 @@ class LanguageViewModel: ObservableObject {
             DispatchQueue.main.async {
                 Task {
                     for document in snapshot.documents {
-                        var language = try document.data(as: Language.self)
+                        let language = try document.data(as: Language.self)
                         self.languages.append(language)
                     }
                 }

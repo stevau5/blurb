@@ -12,7 +12,7 @@ struct Language: Identifiable, Codable, Hashable {
     let id: String
     let name: String
     let hello: String
-    var translations: [Translation] = []
+    var code: String
     
     func hash(into hasher: inout Hasher) {
             hasher.combine(id)

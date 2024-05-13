@@ -16,7 +16,7 @@ struct IndividualLanguage: View {
     let id: String
     let name: String
     let hello: String
-    var translations: [Translation] = []
+    var code: String
     let isAppendable: Bool
     var body: some View {
         NavigationStack {
@@ -44,14 +44,14 @@ struct IndividualLanguage: View {
                 if(isAppendable) {
                     languageViewModel.wasLanguageSelected = true
                     Task {
-                        await languageViewModel.addSelectedLanguagetoSelectedLanguages(selectedLanguage: Language(id: self.id, name: self.name, hello: self.hello), user: viewModel.currentUser!)
+                        await languageViewModel.addSelectedLanguagetoSelectedLanguages(selectedLanguage: Language(id: self.id, name: self.name, hello: self.hello, code: self.code), user: viewModel.currentUser!)
                     }
                 } else {
                     isNavigatingToLearn = true
                 }
             }
             .navigationDestination(isPresented: $isNavigatingToLearn) {
-                LearnView(language: Language(id: self.id, name: self.name, hello: self.hello, translations: self.translations))
+                LearnView(language: Language(id: self.id, name: self.name, hello: self.hello, code: self.code))
             }
         }
     }
@@ -70,5 +70,5 @@ struct IndividualLanguage: View {
 }
 
 #Preview {
-    IndividualLanguage(id: NSUUID().uuidString ,name: "Japanese", hello: "こんにちは", isAppendable: true)
+    IndividualLanguage(id: NSUUID().uuidString ,name: "Japanese", hello: "こんにちは", code: "jp", isAppendable: true)
 }

@@ -36,7 +36,7 @@ struct HomeView: View {
                     .padding([.bottom], 20)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 ForEach(languageViewModel.selectedLanguages, id: \.self) { language in
-                    IndividualLanguage(id: language.id, name: language.name, hello: language.hello, translations: language.translations, isAppendable: false)
+                    IndividualLanguage(id: language.id, name: language.name, hello: language.hello, code: language.code, isAppendable: false)
                 }
             } else {
                 Text("You don't have any blurbs")
@@ -61,5 +61,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    Home()
+    HomeView()
 }

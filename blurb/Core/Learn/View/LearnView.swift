@@ -26,9 +26,9 @@ struct LearnView: View {
                     DisclosureGroup(
                         isExpanded: $toggle,
                         content: {
-                            ForEach(language.translations) { translation in
-                                Word(word: translation.word, translation: translation.translation, index: translation.id)
-                            }
+//                            ForEach(language.translations) { translation in
+//                                Word(word: translation.word, translation: translation.translation, index: translation.id)
+//                            }
                         },
                         label: { Text("Greetings") }
 
@@ -36,9 +36,9 @@ struct LearnView: View {
                     DisclosureGroup(
                         isExpanded: $toggleGreeting,
                         content: {
-                            ForEach(language.translations) { translation in
-                                Word(word: translation.word, translation: translation.translation, index: translation.id)
-                            }
+//                            ForEach(language.translations) { translation in
+//                                Word(word: translation.word, translation: translation.translation, index: translation.id)
+//                            }
                         },
                         label: { Text("Greetings") }
 
@@ -50,6 +50,6 @@ struct LearnView: View {
     
 }
 
-#Preview {
-    Learn(language: Language(id: "some", name: "French", hello: "Bonjour", translations: [Translation(id: "0", word: "Hello", translation: "Bonjour"), Translation(id: "0", word: "Hello", translation: "Bonjour"), Translation(id: "0", word: "Hello", translation: "Bonjour")]))
-}
+//#Preview {
+//    LearnView(language: Language(id: "some", name: "French", hello: "Bonjour", translations: [Translation(id: "0", word: "Hello", translation: "Bonjour"), Translation(id: "0", word: "Hello", translation: "Bonjour"), Translation(id: "0", word: "Hello", translation: "Bonjour")]))
+//}

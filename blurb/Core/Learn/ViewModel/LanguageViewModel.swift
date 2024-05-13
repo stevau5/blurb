@@ -30,20 +30,8 @@ class LanguageViewModel: ObservableObject {
             DispatchQueue.main.async {
                 Task {
                     for document in snapshot.documents {
-                        do {
-                            var language = try document.data(as: Language.self)
-                            Task {
-                                var translations: [Translation] = []
-                                for translation in language.translations {
-                                    var tempTran = Translation(id: translation.id, word: translation.word, translation: translation.translation)
-                                    translations.append(tempTran)
-                                }
-                                language.translations = translations
-                                self.languages.append(language)
-                            }
-                        } catch {
-                            print("Failed to fetch languages, \(error.localizedDescription)")
-                        }
+                        var language = try document.data(as: Language.self)
+                        self.languages.append(language)
                     }
                 }
             }

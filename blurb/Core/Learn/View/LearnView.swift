@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Learn: View {
+struct LearnView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @EnvironmentObject var languageViewModel: LanguageViewModel
     @Environment(\.presentationMode) var presentationMode

@@ -51,14 +51,14 @@
 		A2E0D8362B83F19400A5AE60 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8352B83F19400A5AE60 /* AuthViewModel.swift */; };
 		A2E0D83A2B86E08200A5AE60 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A2E0D8392B86E08200A5AE60 /* .gitignore */; };
 		A2E0D83C2B86E3B900A5AE60 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2E0D83B2B86E3B900A5AE60 /* GoogleService-Info.plist */; };
-		A2E0D83E2B88413200A5AE60 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D83D2B88413200A5AE60 /* Home.swift */; };
+		A2E0D83E2B88413200A5AE60 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D83D2B88413200A5AE60 /* HomeView.swift */; };
 		A2E0D8402B88523800A5AE60 /* AddLanguageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D83F2B88523800A5AE60 /* AddLanguageCard.swift */; };
 		A2E0D8422B88578300A5AE60 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8412B88578300A5AE60 /* Language.swift */; };
 		A2E0D8442B8944C600A5AE60 /* LanguageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8432B8944C600A5AE60 /* LanguageSelector.swift */; };
 		A2E0D8462B89495D00A5AE60 /* IndividualLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8452B89495D00A5AE60 /* IndividualLanguage.swift */; };
 		A2E0D8482B89681200A5AE60 /* LanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8472B89681200A5AE60 /* LanguageViewModel.swift */; };
 		A2E0D84A2B8BA68B00A5AE60 /* UserLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D8492B8BA68B00A5AE60 /* UserLanguage.swift */; };
-		A2E0D84D2B97DEA600A5AE60 /* Learn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D84C2B97DEA600A5AE60 /* Learn.swift */; };
+		A2E0D84D2B97DEA600A5AE60 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0D84C2B97DEA600A5AE60 /* LearnView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,14 +80,14 @@
 		A2E0D8352B83F19400A5AE60 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		A2E0D8392B86E08200A5AE60 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A2E0D83B2B86E3B900A5AE60 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A2E0D83D2B88413200A5AE60 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		A2E0D83D2B88413200A5AE60 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A2E0D83F2B88523800A5AE60 /* AddLanguageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLanguageCard.swift; sourceTree = "<group>"; };
 		A2E0D8412B88578300A5AE60 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		A2E0D8432B8944C600A5AE60 /* LanguageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelector.swift; sourceTree = "<group>"; };
 		A2E0D8452B89495D00A5AE60 /* IndividualLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualLanguage.swift; sourceTree = "<group>"; };
 		A2E0D8472B89681200A5AE60 /* LanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewModel.swift; sourceTree = "<group>"; };
 		A2E0D8492B8BA68B00A5AE60 /* UserLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLanguage.swift; sourceTree = "<group>"; };
-		A2E0D84C2B97DEA600A5AE60 /* Learn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn.swift; sourceTree = "<group>"; };
+		A2E0D84C2B97DEA600A5AE60 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +128,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2B9EB1A2BF1991F009CDBB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2E0D83D2B88413200A5AE60 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2B9EB1B2BF1993B009CDBB4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A2E0D83F2B88523800A5AE60 /* AddLanguageCard.swift */,
+				A2E0D8432B8944C600A5AE60 /* LanguageSelector.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A2B9EB1C2BF199DE009CDBB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2E0D84C2B97DEA600A5AE60 /* LearnView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2B9EB1D2BF199EF009CDBB4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A2E0D8472B89681200A5AE60 /* LanguageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A2E0D7C92B829CAF00A5AE60 = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				A2E0D8352B83F19400A5AE60 /* AuthViewModel.swift */,
-				A2E0D8472B89681200A5AE60 /* LanguageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -257,7 +289,8 @@
 		A2E0D84B2B97DE9100A5AE60 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
-				A2E0D84C2B97DEA600A5AE60 /* Learn.swift */,
+				A2B9EB1D2BF199EF009CDBB4 /* ViewModel */,
+				A2B9EB1C2BF199DE009CDBB4 /* View */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -265,9 +298,8 @@
 		A2E0D84E2B99672B00A5AE60 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A2E0D83D2B88413200A5AE60 /* Home.swift */,
-				A2E0D83F2B88523800A5AE60 /* AddLanguageCard.swift */,
-				A2E0D8432B8944C600A5AE60 /* LanguageSelector.swift */,
+				A2B9EB1B2BF1993B009CDBB4 /* Components */,
+				A2B9EB1A2BF1991F009CDBB4 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -379,7 +411,7 @@
 				A2E0D84A2B8BA68B00A5AE60 /* UserLanguage.swift in Sources */,
 				A2E0D7EF2B82A43200A5AE60 /* LoginView.swift in Sources */,
 				A2E0D7F12B82A5FE00A5AE60 /* InputView.swift in Sources */,
-				A2E0D83E2B88413200A5AE60 /* Home.swift in Sources */,
+				A2E0D83E2B88413200A5AE60 /* HomeView.swift in Sources */,
 				A2E0D8462B89495D00A5AE60 /* IndividualLanguage.swift in Sources */,
 				A2E0D8482B89681200A5AE60 /* LanguageViewModel.swift in Sources */,
 				A2B9EB192BEB0DCB009CDBB4 /* Phrase.swift in Sources */,
@@ -393,7 +425,7 @@
 				A2E0D7F72B83E3BC00A5AE60 /* SettingsRowView.swift in Sources */,
 				A2E0D8442B8944C600A5AE60 /* LanguageSelector.swift in Sources */,
 				A2B9EB152BE847D1009CDBB4 /* Translation.swift in Sources */,
-				A2E0D84D2B97DEA600A5AE60 /* Learn.swift in Sources */,
+				A2E0D84D2B97DEA600A5AE60 /* LearnView.swift in Sources */,
 				A2E0D8422B88578300A5AE60 /* Language.swift in Sources */,
 				A2E0D8402B88523800A5AE60 /* AddLanguageCard.swift in Sources */,
 				A2E0D8362B83F19400A5AE60 /* AuthViewModel.swift in Sources */,

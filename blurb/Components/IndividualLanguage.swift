@@ -51,7 +51,7 @@ struct IndividualLanguage: View {
                 }
             }
             .navigationDestination(isPresented: $isNavigatingToLearn) {
-                Learn(language: Language(id: self.id, name: self.name, hello: self.hello, translations: self.translations))
+                LearnView(language: Language(id: self.id, name: self.name, hello: self.hello, translations: self.translations))
             }
         }
     }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Home: View {
+struct HomeView: View {
     @EnvironmentObject var viewModel: AuthViewModel;
     @EnvironmentObject var languageViewModel: LanguageViewModel;
     

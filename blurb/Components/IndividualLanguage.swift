@@ -17,7 +17,6 @@ struct IndividualLanguage: View {
     let name: String
     let hello: String
     var code: String
-    let isAppendable: Bool
     var body: some View {
         NavigationStack {
             VStack {
@@ -41,14 +40,7 @@ struct IndividualLanguage: View {
             .padding(.vertical, 5)
             .contentShape(Rectangle())
             .onTapGesture {
-                if(isAppendable) {
-                    languageViewModel.wasLanguageSelected = true
-                    Task {
-                        await languageViewModel.addSelectedLanguagetoSelectedLanguages(selectedLanguage: Language(id: self.id, name: self.name, hello: self.hello, code: self.code), user: viewModel.currentUser!)
-                    }
-                } else {
-                    isNavigatingToLearn = true
-                }
+                isNavigatingToLearn = true
             }
             .navigationDestination(isPresented: $isNavigatingToLearn) {
                 LearnView(language: Language(id: self.id, name: self.name, hello: self.hello, code: self.code))
@@ -70,5 +62,5 @@ struct IndividualLanguage: View {
 }
 
 #Preview {
-    IndividualLanguage(id: NSUUID().uuidString ,name: "Japanese", hello: "こんにちは", code: "jp", isAppendable: true)
+    IndividualLanguage(id: NSUUID().uuidString ,name: "Japanese", hello: "こんにちは", code: "jp")
 }

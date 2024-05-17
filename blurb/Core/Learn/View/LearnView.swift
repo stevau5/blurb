@@ -28,7 +28,7 @@ struct LearnView: View {
                         ),
                         content: {
                             ForEach(phraseViewModel.groupedPhrases[categoryId] ?? []) { phrase in
-                                Word(word: phrase.defaultPhrase, translation: phrase.translations[language.code]!)
+                                Word(word: phrase.defaultPhrase, translation: phrase.translations[language.code]!, code: language.code)
                                     .padding(.horizontal, -25)
                             }
                         },

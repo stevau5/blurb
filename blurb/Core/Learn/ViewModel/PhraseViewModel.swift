@@ -29,6 +29,7 @@ class PhraseViewModel: ObservableObject {
             DispatchQueue.main.async {
                 do {
                     for document in snapshot.documents {
+                        print("print: \(document.data())")
                         let phrase = try document.data(as: Phrase.self)
                         self.phrases.append(phrase)
                     }

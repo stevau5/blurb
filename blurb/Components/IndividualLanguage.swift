@@ -41,6 +41,7 @@ struct IndividualLanguage: View {
             .contentShape(Rectangle())
             .onTapGesture {
                 isNavigatingToLearn = true
+                triggerHapticFeedback()
             }
             .navigationDestination(isPresented: $isNavigatingToLearn) {
                 LearnView(language: Language(id: self.id, name: self.name, hello: self.hello, code: self.code))
@@ -58,6 +59,11 @@ struct IndividualLanguage: View {
         } else {
             return Color(hue: 244.0 / 255.0, saturation: 237.0 / 255.0, brightness: 204.0 / 255.0)
         }
+    }
+    
+    func triggerHapticFeedback() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
 }
 

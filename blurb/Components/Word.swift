@@ -37,16 +37,16 @@ struct Word: View {
     func colorMap() -> Color {
         if counter == 0 {
             counter += 1
-            return Color(red: 205.0 / 255.0, green: 232.0 / 255.0, blue: 229.0 / 255.0)
+            return Color(red: 224 / 255.0, green: 251 / 255.0, blue: 226 / 255.0)
         } else if counter == 1 {
             counter += 1
-            return Color(red: 239.0 / 255.0, green: 247.0 / 255.0, blue: 255.0 / 255.0)
+            return Color(red: 191 / 255.0, green: 246 / 255.0, blue: 195 / 255.0)
         } else if counter == 2 {
             counter += 1
-            return Color(red: 122.0 / 255.0, green: 178.0 / 255.0, blue: 178.0 / 255.0)
+            return Color(red: 176 / 255.0, green: 235 / 255.0, blue: 180 / 255.0)
         } else if  counter == 3 {
             counter = 0
-            return Color(red: 77.0 / 255.0, green: 134.0 / 255.0, blue: 156.0 / 255.0)
+            return Color(red: 172 / 255.0, green: 225 / 255.0, blue: 175 / 255.0)
         } else {
             return Color.black
         }

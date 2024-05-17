@@ -24,7 +24,6 @@ struct User: Identifiable, Codable {
     }
     
     var first_name: String {
-        let formatter = PersonNameComponentsFormatter()
         let firstName = fullname.components(separatedBy: " ").first ?? ""
         return firstName
     }

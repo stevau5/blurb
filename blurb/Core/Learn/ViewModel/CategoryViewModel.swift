@@ -26,7 +26,7 @@ class CategoryViewModel: ObservableObject {
             DispatchQueue.main.async {
                 Task {
                     for document in snapshot.documents {
-                        var category = try document.data(as: Category.self)
+                        let category = try document.data(as: Category.self)
                         self.categories.append(category)
                     }
                     print(self.categories)

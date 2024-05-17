@@ -8,9 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Translation: Codable, Identifiable, Hashable {
-    let id: String
-    let word: String
-    let translation: String
+struct Translation {
+    let categoryId: String
+    let phrase: [Phrase]
 }
 

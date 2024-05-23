@@ -13,32 +13,39 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                HStack {
-                    Spacer()
-                    NavigationLink(destination: ProfileView()) {
-                        Image(systemName: "gear")
-                            .padding()
-                            .imageScale(.large)
-                            .foregroundColor(Color(.systemGray))
+            ZStack {
+                Color.white
+                    .ignoresSafeArea()
+                VStack {
+                    HStack {
+                        Spacer()
+                        NavigationLink(destination: ProfileView()) {
+                            Image(systemName: "gear")
+                                .padding()
+                                .imageScale(.large)
+                                .foregroundColor(.customDarkGreen)
+                        }
                     }
+                    Text("Hello \(viewModel.currentUser?.first_name ?? "")!")
+                        .font(.largeTitle)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.horizontal)
+                        .foregroundColor(Color.customDarkGreen)
+                        .fontWeight(.heavy)
+                    Text("Click on a blurb below to get started")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .padding(.horizontal)
+                        .padding([.bottom], 20)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .foregroundColor(Color.customDarkGreen)
+                    ForEach(languageViewModel.languages, id: \.self) { language in
+                        IndividualLanguage(id: language.id, name: language.name, hello: language.hello, code: language.code)
+                    }
+                    
+                    Spacer()
                 }
             }
-            Text("Hello \(viewModel.currentUser?.first_name ?? "")!")
-                .font(.largeTitle)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal)
-            Text("Click on a blurb below to get started")
-                .font(.headline)
-                .fontWeight(.light)
-                .padding(.horizontal)
-                .padding([.bottom], 20)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            ForEach(languageViewModel.languages, id: \.self) { language in
-                IndividualLanguage(id: language.id, name: language.name, hello: language.hello, code: language.code)
-                }
-            
-            Spacer()
         }
     }
 }

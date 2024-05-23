@@ -24,7 +24,7 @@ struct blurbApp: App {
                 .environmentObject(viewModel)
                 .environmentObject(languageViewModel)
                 .environmentObject(categoryViewModel)
-                .environmentObject(phraseViewModel)
+                .environmentObject(phraseViewModel)                
         }
     }
 }

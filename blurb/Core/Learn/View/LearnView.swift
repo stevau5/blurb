@@ -15,31 +15,44 @@ struct LearnView: View {
     var language: Language
     
     var body: some View {
-        VStack() {
-            Text("\(self.language.hello)")
-                .padding(.vertical)
-                .font(.system(size: 20, weight: .bold))
-            List {
-                ForEach(phraseViewModel.groupedPhrases.keys.sorted(), id: \.self) { categoryId in
-                    DisclosureGroup(
-                        isExpanded: Binding<Bool>(
-                            get: { phraseViewModel.toggleStates[categoryId] ?? false },
-                            set: { phraseViewModel.toggleStates[categoryId] = $0 }
-                        ),
-                        content: {
-                            ForEach(phraseViewModel.groupedPhrases[categoryId] ?? []) { phrase in
-                                Word(word: phrase.defaultPhrase, translation: phrase.translations[language.code]!, code: language.code)
-                                    .padding(.horizontal, -25)
-                            }
-                        },
-                        label: {
-                            Text(getCategoryName(id: categoryId))
-                                .fontWeight(.bold)
-                        }
-                    )
+        ZStack {
+            Color.customBeige
+                .ignoresSafeArea()
+            VStack {
+                Text("\(self.language.hello)")
+                    .padding(.vertical)
+                    .font(.system(size: 20, weight: .bold))
+                
+                
+                VStack {
+                    Text("Greetings")
                 }
+                
+                
+                
+                
+    //            List {
+    //                ForEach(phraseViewModel.groupedPhrases.keys.sorted(), id: \.self) { categoryId in
+    //                    DisclosureGroup(
+    //                        isExpanded: Binding<Bool>(
+    //                            get: { phraseViewModel.toggleStates[categoryId] ?? false },
+    //                            set: { phraseViewModel.toggleStates[categoryId] = $0 }
+    //                        ),
+    //                        content: {
+    //                            ForEach(phraseViewModel.groupedPhrases[categoryId] ?? []) { phrase in
+    //                                Word(word: phrase.defaultPhrase, translation: phrase.translations[language.code]!, code: language.code)
+    //                                    .padding(.horizontal, -25)
+    //                            }
+    //                        },
+    //                        label: {
+    //                            Text(getCategoryName(id: categoryId))
+    //                                .fontWeight(.bold)
+    //                        }
+    //                    )
+    //                }
+    //            }
+    //            .listStyle(PlainListStyle())
             }
-            .listStyle(PlainListStyle())
         }
     }
     

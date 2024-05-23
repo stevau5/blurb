@@ -14,7 +14,8 @@ struct Word: View {
     let word: String;
     let translation: String;
     let code: String;
-    @State private var audioPlayer: AVAudioPlayer?
+    let speechSynthesizer = AVSpeechSynthesizer()
+
     
     var body: some View {
         HStack {
@@ -41,46 +42,25 @@ struct Word: View {
     }
     
     func speak(_ word: String) {
-        let apiKey = "sk-proj-cbFnUlXhi522uLN0LIVmT3BlbkFJgMjKoInIYkuFHSb4D81K"
-        let url = URL(string: "https://api.openai.com/v1/audio/speech")!
+        let speechUtterance = AVSpeechUtterance(string: word)
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: languageCodeMap(code: self.code))
+        speechUtterance.rate = AVSpeechUtteranceDefaultSpeechRate
         
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
-        
-        let requestBody: [String: Any] = [
-            "input": word,
-            "voice": "alloy",
-            "model": "tts-1",
-            "language": "en",
-            "response_format": "mp3",
-            "speed": "0.75"
-        ]
-
-        request.httpBody = try? JSONSerialization.data(withJSONObject: requestBody)
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-                return
-            }
-
-            guard let data = data else {
-                print("No data received")
-                return
-            }
-            playAudio(data: data)
-        }.resume()
-        
-        func playAudio(data: Data) {
-            do {
-                audioPlayer = try AVAudioPlayer(data: data)
-                audioPlayer?.prepareToPlay()
-                audioPlayer?.play()
-            } catch {
-                print("Error playing audio: \(error.localizedDescription)")
-            }
+        speechSynthesizer.speak(speechUtterance)
+    }
+    
+    func languageCodeMap(code: String) -> String {
+        switch code {
+        case "en":
+            return "en-US"
+        case "fr":
+            return "fr-CA"
+        case "it":
+            return "it-IT"
+        case "jp":
+            return "ja-JP"
+        default:
+            return "en-US"
         }
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Phrase: Codable, Identifiable {
+struct Phrase: Codable, Identifiable, Hashable {
     let id: String
     let categoryId: String
     let defaultPhrase: String

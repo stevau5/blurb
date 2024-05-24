@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A28CCDF12C0025350021C728 /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28CCDF02C0025350021C728 /* CategoryList.swift */; };
+		A28CCDF32C00292B0021C728 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28CCDF22C00292B0021C728 /* CategoryItem.swift */; };
 		A2B9EB132BE82187009CDBB4 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B9EB122BE82187009CDBB4 /* Word.swift */; };
 		A2B9EB152BE847D1009CDBB4 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B9EB142BE847D1009CDBB4 /* Translation.swift */; };
 		A2B9EB172BEB0D55009CDBB4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B9EB162BEB0D55009CDBB4 /* Category.swift */; };
@@ -62,6 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A28CCDF02C0025350021C728 /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
+		A28CCDF22C00292B0021C728 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		A2B9EB122BE82187009CDBB4 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		A2B9EB142BE847D1009CDBB4 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		A2B9EB162BEB0D55009CDBB4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				A2E0D84C2B97DEA600A5AE60 /* LearnView.swift */,
+				A28CCDF02C0025350021C728 /* CategoryList.swift */,
+				A28CCDF22C00292B0021C728 /* CategoryItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -409,6 +415,7 @@
 				A2B9EB192BEB0DCB009CDBB4 /* Phrase.swift in Sources */,
 				A2E0D7D82B829CAF00A5AE60 /* ContentView.swift in Sources */,
 				A2E0D7D62B829CAF00A5AE60 /* blurbApp.swift in Sources */,
+				A28CCDF32C00292B0021C728 /* CategoryItem.swift in Sources */,
 				A2B9EB132BE82187009CDBB4 /* Word.swift in Sources */,
 				A2E0D7F92B83E89C00A5AE60 /* User.swift in Sources */,
 				A2E0D7F52B83DEB700A5AE60 /* ProfileView.swift in Sources */,
@@ -421,6 +428,7 @@
 				A2E0D84D2B97DEA600A5AE60 /* LearnView.swift in Sources */,
 				A2E0D8422B88578300A5AE60 /* Language.swift in Sources */,
 				A2E0D8362B83F19400A5AE60 /* AuthViewModel.swift in Sources */,
+				A28CCDF12C0025350021C728 /* CategoryList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

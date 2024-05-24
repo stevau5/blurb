@@ -47,7 +47,7 @@ struct IndividualLanguage: View {
                 LearnView(language: Language(id: self.id, name: self.name, hello: self.hello, code: self.code))
             }
         }
-        .shadow(color: Color.black, radius: 5, x: 0, y: 3)
+        .shadow(color: Color.gray, radius: 2, x: 0, y: 2)
     }
     
     func triggerHapticFeedback() {

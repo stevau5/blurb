@@ -14,7 +14,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.white
+                Color.customCream
                     .ignoresSafeArea()
                 VStack {
                     HStack {
@@ -30,7 +30,7 @@ struct HomeView: View {
                         .font(.largeTitle)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding(.horizontal)
-                        .foregroundColor(Color.customDarkGreen)
+                        .foregroundColor(Color.black)
                         .fontWeight(.heavy)
                     Text("Click on a blurb below to get started")
                         .font(.headline)
@@ -38,7 +38,7 @@ struct HomeView: View {
                         .padding(.horizontal)
                         .padding([.bottom], 20)
                         .frame(maxWidth: .infinity, alignment: .center)
-                        .foregroundColor(Color.customDarkGreen)
+                        .foregroundColor(Color.black)
                     ForEach(languageViewModel.languages, id: \.self) { language in
                         IndividualLanguage(id: language.id, name: language.name, hello: language.hello, code: language.code)
                     }

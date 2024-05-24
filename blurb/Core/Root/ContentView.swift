@@ -12,6 +12,7 @@ extension Color {
     static let customBeige = Color(red: 246.0 / 255.0, green: 233.0 / 255.0, blue: 178.0 / 255.0)
     static let customDarkGreen = Color(red: 10.0 / 255.0, green: 104.0 / 255.0, blue: 71.0 / 255.0)
     static let customGreen = Color(red: 122.0 / 255.0, green: 186.0 / 255.0, blue: 120.0 / 255.0)
+    static let customCream = Color(red: 238.0 / 255.0, green: 231.0 / 255.0, blue: 218.0 / 255.0)
 }
 struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel

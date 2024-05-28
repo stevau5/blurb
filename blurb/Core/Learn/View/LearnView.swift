@@ -22,7 +22,8 @@ struct LearnView: View {
             VStack {
                 Text("\(self.language.hello)")
                     .padding(.vertical)
-                    .font(.system(size: 20, weight: .bold))
+                    .font(.system(size: 30, weight: .bold))
+                    .foregroundColor(Color.customDarkGreen)
                 
                 ForEach(phraseViewModel.groupedPhrases.keys.sorted(), id: \.self) { categoryId in
                     CategoryList(category: phraseViewModel.groupedPhrases[categoryId] ?? [], categoryId: categoryId, language: language)
